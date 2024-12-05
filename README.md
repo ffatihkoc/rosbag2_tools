@@ -78,6 +78,6 @@ Output Files:
 You can run the script to analyze the odometry for each rosbag. The following command analyzes the data in the subdirectories of the specified directory:
 
 ```bash
-python3 ~/ros_ws/src/rosbag_analyze/scripts/evo_tool_analyze.py
+python3 ~/ros_ws/src/rosbag2_tools/rosbag_analyze/scripts/evo_tool_analyze.py
 ```
 **Note:** You can modify the input and output paths when running the script. If you want to use the default paths, just press 'Enter'.
