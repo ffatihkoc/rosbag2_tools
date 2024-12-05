@@ -19,9 +19,10 @@ To install Evo Tools, refer to the [Evo GitHub repository](https://github.com/Mi
 You need to run this project within your own ROS2 workspace (e.g., `ros_ws`). Follow the steps below to create your workspace:
 
 ```bash
-mkdir ~/ros_ws/
-cd ~/ros_ws/
+mkdir -p ~/ros_ws/src
+cd ~/ros_ws/src
 git clone https://github.com/your_username/rosbag_analyze.git
+cd ~/ros_ws
 colcon build
 source install/setup.bash
 ```
