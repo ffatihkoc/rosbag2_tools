@@ -82,9 +82,6 @@ class RosbagOdometryAnalyzer:
 
     def check_message_count(self, rosbags_dir): #TODO Check message_count in metadata.yaml if its 0 skip
         pass
-    
-    def check_duplicate_folder(self,metrics_dir, visualization_dir): #TODO Check file with the same name in the save location
-        pass
 
 def main():
     # Default path

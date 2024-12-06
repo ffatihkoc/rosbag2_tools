@@ -31,12 +31,12 @@ source install/setup.bash
 
 ### 1. Rosbag Splitter
 
-**Note:** Before running the program, ensure that the rosbag folder you want to split is located inside `~/ros_ws/src/rosbag2_tools/rosbag_analyze/rosbags`. If it is not, please move the folder to the appropriate location or modify the folder path when running the program.
+**Note:** Before running the program, ensure that the rosbag folder you want to split is located inside `~/ros_ws/src/rosbag2_tools/rosbag_analyze/rosbags`. If it is not, please move the folder to the appropriate location or modify the file path when running the program.
 
 #### Parameters
 
-- `input_uri`: URI of the input rosbag file (default: `~/ros_ws/src/rosbag2_tools/rosbag_analyze/rosbags/case_bag`).
-- `output_uri`: URI of the output rosbag file (default: `~/ros_ws/src/rosbag2_tools/rosbag_analyze/created_rosbags/new`).
+- `bag_name`: Name of the input rosbag file (default: `case_bag`).
+- `output_uri`: URI of the output rosbag file (default: `~/ros_ws/src/rosbag2_tools/rosbag_analyze/created_rosbags/`).
 - `split_duration`: Duration of each split (in seconds, default: 60).
 
 #### Example Usage
@@ -57,13 +57,13 @@ ros2 launch rosbag_analyze rosbag_splitter.launch.py
 ##### 1.2 Run with updated parameters
 
 ```bash
-ros2 run rosbag_analyze split_rosbag --ros-args -p input_uri:="/home/user/my_rosbags/my_rosbag" -p output_uri:="/home/user/my_results/new_rosbag"
+ros2 run rosbag_analyze split_rosbag --ros-args -p bag_name:="my_bag" -p output_uri:="/home/user/my_results/new_rosbag" -p split_duration:="120"
 ```
 
 or
 
 ```bash
-ros2 launch rosbag_analyze rosbag_splitter.launch.py input_uri:="/home/user/my_rosbags/my_rosbag" output_uri:="/home/user/my_results/new_rosbag" split_duration:="120"
+ros2 launch rosbag_analyze rosbag_splitter.launch.py bag_name:="case_bag" output_uri:="/home/user/my_results/new_rosbag" split_duration:="120"
 ```
 
 ### 2. Odometry Analyze
