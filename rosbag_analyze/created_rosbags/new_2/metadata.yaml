@@ -1,0 +1,32 @@
+rosbag2_bagfile_information:
+  version: 5
+  storage_identifier: sqlite3
+  duration:
+    nanoseconds: 59980437513
+  starting_time:
+    nanoseconds_since_epoch: 1733136970357939046
+  message_count: 4702
+  topics_with_message_count:
+    - topic_metadata:
+        name: /casestudy/reference_pose
+        type: geometry_msgs/msg/PoseStamped
+        serialization_format: cdr
+        offered_qos_profiles: ""
+      message_count: 2574
+    - topic_metadata:
+        name: /casestudy/predicted_pose
+        type: geometry_msgs/msg/PoseStamped
+        serialization_format: cdr
+        offered_qos_profiles: ""
+      message_count: 2128
+  compression_format: ""
+  compression_mode: ""
+  relative_file_paths:
+    - new_2_0.db3
+  files:
+    - path: new_2_0.db3
+      starting_time:
+        nanoseconds_since_epoch: 1733136970357939046
+      duration:
+        nanoseconds: 59980437513
+      message_count: 4702
