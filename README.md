@@ -31,12 +31,12 @@ source install/setup.bash
 
 ### 1. Rosbag Splitter
 
-**Note:** Before running the program, ensure that the rosbag folder you want to split is located inside `~/ros_ws/src/rosbag2_tool/rosbag_analyze/rosbags`. If it is not, please move the folder to the appropriate location or modify the folder path when running the program.
+**Note:** Before running the program, ensure that the rosbag folder you want to split is located inside `~/ros_ws/src/rosbag2_tools/rosbag_analyze/rosbags`. If it is not, please move the folder to the appropriate location or modify the folder path when running the program.
 
 #### Parameters
 
-- `input_uri`: URI of the input rosbag file (default: `~/ros_ws/src/rosbag2_tool/rosbag_analyze/rosbags/case_bag`).
-- `output_uri`: URI of the output rosbag file (default: `~/ros_ws/src/rosbag2_tool/rosbag_analyze/created_rosbags/new`).
+- `input_uri`: URI of the input rosbag file (default: `~/ros_ws/src/rosbag2_tools/rosbag_analyze/rosbags/case_bag`).
+- `output_uri`: URI of the output rosbag file (default: `~/ros_ws/src/rosbag2_tools/rosbag_analyze/created_rosbags/new`).
 - `split_duration`: Duration of each split (in seconds, default: 60).
 
 #### Example Usage
@@ -68,7 +68,7 @@ ros2 launch rosbag_analyze rosbag_splitter.launch.py input_uri:="/home/user/my_r
 
 ### 2. Odometry Analyze
 
-To perform Trajectory, Relative Pose Error (RPE), and Absolute Pose Error (APE) analysis, move your rosbag folders into `~/ros_ws/src/rosbag2_tool/rosbag_analyze/created_rosbags`. You can examine the metrics and visualization results in the `~/ros_ws/src/rosbag2_tool/rosbag_analyze/evo_tool` directory.
+To perform Trajectory, Relative Pose Error (RPE), and Absolute Pose Error (APE) analysis, move your rosbag folders into `~/ros_ws/src/rosbag2_tools/rosbag_analyze/created_rosbags`. You can examine the metrics and visualization results in the `~/ros_ws/src/rosbag2_tools/rosbag_analyze/evo_tool` directory.
 
 **Note** Make sure that there are `metrics` and `visualization` folders in the location where you will save the analysis results.
 
@@ -80,8 +80,8 @@ Output Files:
 You can run the script to analyze the odometry for each rosbag. The following command analyzes the data in the subdirectories of the specified directory:
 
 ```bash
-python3 ~/ros_ws/src/rosbag2_tool/rosbag_analyze/scripts/evo_tool_analyze.py
+python3 ~/ros_ws/src/rosbag2_tools/rosbag_analyze/scripts/evo_tool_analyze.py
 ```
-**Note:** Before running the program, ensure that the rosbag folder you want to analyze is located inside `~/ros_ws/src/rosbag2_tool/rosbag_analyze/created_rosbags`. If it is not, please move the folder to the appropriate location or modify the folder path when running the program.
+**Note:** Before running the program, ensure that the rosbag folder you want to analyze is located inside `~/ros_ws/src/rosbag2_tools/rosbag_analyze/created_rosbags`. If it is not, please move the folder to the appropriate location or modify the folder path when running the program.
 
 **Note:** You can modify the input and output paths when running the script. If you want to use the default paths, just press 'Enter'.
